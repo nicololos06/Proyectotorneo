@@ -62,26 +62,44 @@ document.addEventListener('DOMContentLoaded', function() {
     startAutoSlide();
 });
 
-// Cards Desplegables
+
+;// Cards Desplegables 
 document.querySelectorAll('.expandable-card').forEach(card => {
-    card.addEventListener('click', function() {
+    card.addEventListener('click', function(e) {
+        // Evitar que el click en el botón active el desplegable
+        if (e.target.closest('.card-btn')) return;
+        
         const content = this.querySelector('.card-content');
-        content.style.maxHeight = content.scrollHeight + 'px';
-        content.style.overflow = 'visible';
-        this.style.cursor = 'default';
-        this.classList.add('expanded');
+        if (content.style.maxHeight) {
+            // Cerrar
+            content.style.maxHeight = null;
+            this.style.cursor = 'pointer';
+            this.classList.remove('expanded');
+        } else {
+            // Abrir
+            content.style.maxHeight = content.scrollHeight + 'px';
+            content.style.overflow = 'visible';
+            this.style.cursor = 'default';
+            this.classList.add('expanded');
+        }
     });
 });
 
-// Smooth Scroll para Navbar
+// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
+            });
+            // Cerrar cards al navegar
+            document.querySelectorAll('.card.expanded').forEach(card => {
+                card.querySelector('.card-content').style.maxHeight = null;
+                card.classList.remove('expanded');
             });
         }
     });
