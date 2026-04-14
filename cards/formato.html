@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formato Torneo - Oratorio Don Bosco</title>
+    
+    <!-- Google Fonts -->
+    <link href="/torneo-don-bosco/fonts/the-athletic-font.zip" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../torneo-don-bosco/css/formato.css">
+</head>
+<body>
+    <!-- HEADER SIMPLIFICADO -->
+    <header class="header-simple">
+    <nav class="nav-simple">
+        <div class="nav-container">
+            <a href="../torneo-don-bosco/index.html" class="nav-home nav-center">
+                <img src="../torneo-don-bosco/img/iconos/logo - copia.png" alt="Logo Don Bosco" class="logo-simple">
+                <span>Torneo Oratorio Don Bosco</span>
+            </a>
+        </div>
+    </nav>
+</header>
+
+    <main>
+        <!-- SECCIÓN 1: FASE DE GRUPOS -->
+        <section class="grupo-section">
+            <div class="container">
+                <h1 class="main-title">FASE DE GRUPOS</h1>
+                <div class="grupos-grid">
+                    <!-- GRUPO A -->
+                    <div class="grupo-card">
+                        <h2>GRUPO A</h2>
+                        <div class="equipos-lista">
+                            <div class="equipo-item">🇦🇷 Don Bosco FC</div>
+                            <div class="equipo-item">🇦🇷 La Gloria</div>
+                            <div class="equipo-item">🇦🇷 Juniors Unidos</div>
+                            <div class="equipo-item">🇦🇷 Atlético Norte</div>
+                        </div>
+                        <div class="tabla-grupo">
+                            <table>
+                                <thead>
+                                    <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>PTS</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>1</td><td>Don Bosco FC</td><td>3</td><td>3</td><td>0</td><td>0</td><td>9</td><td>2</td><td><strong>9</strong></td></tr>
+                                    <tr><td>2</td><td>La Gloria</td><td>3</td><td>2</td><td>0</td><td>1</td><td>6</td><td>4</td><td><strong>6</strong></td></tr>
+                                    <tr><td>3</td><td>Juniors Unidos</td><td>3</td><td>1</td><td>0</td><td>2</td><td>3</td><td>6</td><td><strong>3</strong></td></tr>
+                                    <tr><td>4</td><td>Atlético Norte</td><td>3</td><td>0</td><td>0</td><td>3</td><td>2</td><td>8</td><td><strong>0</strong></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- GRUPO B -->
+                    <div class="grupo-card">
+                        <h2>GRUPO B</h2>
+                        <div class="equipos-lista">
+                            <div class="equipo-item">🇦🇷 Real Madrid Juniors</div>
+                            <div class="equipo-item">🇦🇷 Boca del Riachuelo</div>
+                            <div class="equipo-item">🇦🇷 River Plate Kids</div>
+                            <div class="equipo-item">🇦🇷 San Lorenzo FC</div>
+                        </div>
+                        <!-- Tabla similar... -->
+                    </div>
+
+                    <!-- GRUPO C y D similares -->
+                </div>
+            </div>
+        </section>
+
+       <!-- SECCIÓN 2: PREDICTOR MATA-MATA INTERACTIVO -->
+<section class="matamatta-section">
+    <div class="container">
+        <h1 class="main-title">🔮 PREDICTOR DEL TORNEO</h1>
+        <p class="predictor-subtitle">Selecciona los clasificados de cada grupo y arma tu bracket</p>
+        
+        <!-- FASE GRUPOS - SELECCIÓN -->
+      <div class="grupo-selector">
+    <div class="grupo-row">
+        <div class="grupo-select-card" data-grupo="A">
+            <h3>GRUPO A <span class="clasificados">(Selecciona 2)</span></h3>
+            <div class="equipos-selector">
+                <label><input type="checkbox" data-equipo="A1" data-nombre="Don Bosco FC"> 🇦🇷 Don Bosco FC</label>
+                <label><input type="checkbox" data-equipo="A2" data-nombre="La Gloria"> 🇦🇷 La Gloria</label>
+                <label><input type="checkbox" data-equipo="A3" data-nombre="Juniors Unidos"> 🇦🇷 Juniors Unidos</label>
+                <label><input type="checkbox" data-equipo="A4" data-nombre="Atlético Norte"> 🇦🇷 Atlético Norte</label>
+            </div>
+        </div>
+        <div class="grupo-select-card" data-grupo="B">
+            <h3>GRUPO B <span class="clasificados">(Selecciona 2)</span></h3>
+            <div class="equipos-selector">
+                <label><input type="checkbox" data-equipo="B1" data-nombre="Real Madrid Juniors"> 🇪🇸 Real Madrid Juniors</label>
+                <label><input type="checkbox" data-equipo="B2" data-nombre="Boca del Riachuelo"> 🇦🇷 Boca del Riachuelo</label>
+                <label><input type="checkbox" data-equipo="B3" data-nombre="River Plate Kids"> 🇦🇷 River Plate Kids</label>
+                <label><input type="checkbox" data-equipo="B4" data-nombre="San Lorenzo FC"> 🇦🇷 San Lorenzo FC</label>
+            </div>
+        </div>
+    </div>
+    <div class="grupo-row">
+        <div class="grupo-select-card" data-grupo="C">
+            <h3>GRUPO C <span class="clasificados">(Selecciona 2)</span></h3>
+            <div class="equipos-selector">
+                <label><input type="checkbox" data-equipo="C1" data-nombre="Independiente"> 🇦🇷 Independiente</label>
+                <label><input type="checkbox" data-equipo="C2" data-nombre="Racing Club"> 🇦🇷 Racing Club</label>
+                <label><input type="checkbox" data-equipo="C3" data-nombre="Estudiantes"> 🇦🇷 Estudiantes</label>
+                <label><input type="checkbox" data-equipo="C4" data-nombre="Gimnasia LP"> 🇦🇷 Gimnasia LP</label>
+            </div>
+        </div>
+        <div class="grupo-select-card" data-grupo="D">
+            <h3>GRUPO D <span class="clasificados">(Selecciona 2)</span></h3>
+            <div class="equipos-selector">
+                <label><input type="checkbox" data-equipo="D1" data-nombre="Newell's Old Boys"> 🇦🇷 Newell's</label>
+                <label><input type="checkbox" data-equipo="D2" data-nombre="Rosario Central"> 🇦🇷 Central</label>
+                <label><input type="checkbox" data-equipo="D3" data-nombre="Colón Santa Fe"> 🇦🇷 Colón</label>
+                <label><input type="checkbox" data-equipo="D4" data-nombre="Unión Santa Fe"> 🇦🇷 Unión</label>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+        <!-- BRACKET AUTOMÁTICO -->
+<div class="bracket-container">
+    <!-- CUARTOS -->
+    <div class="round cuartos hidden">
+        <h3>⚔️ CUARTOS DE FINAL</h3>
+        <div class="qf-match" data-qf="1">
+            <div class="equipo-slot" data-slot="QF1_1A"></div>
+            <span>VS</span>
+            <div class="equipo-slot" data-slot="QF1_2B"></div>
+        </div>
+        <div class="qf-match" data-qf="2">
+            <div class="equipo-slot" data-slot="QF2_2A"></div>
+            <span>VS</span>
+            <div class="equipo-slot" data-slot="QF2_1B"></div>
+        </div>
+        <div class="qf-match" data-qf="3">
+            <div class="equipo-slot" data-slot="QF3_1C"></div>
+            <span>VS</span>
+            <div class="equipo-slot" data-slot="QF3_2D"></div>
+        </div>
+        <div class="qf-match" data-qf="4">
+            <div class="equipo-slot" data-slot="QF4_2C"></div>
+            <span>VS</span>
+            <div class="equipo-slot" data-slot="QF4_1D"></div>
+        </div>
+    </div>
+
+    <!-- SEMIS -->
+    <div class="round semis hidden">
+        <h3>🥈 SEMIFINALES</h3>
+        <div class="sf-match" data-sf="1">
+            <div class="equipo-slot ganador-slot" data-slot="SF1_QF1"></div>
+            <span>VS</span>
+            <div class="equipo-slot ganador-slot" data-slot="SF1_QF2"></div>
+        </div>
+        <div class="sf-match" data-sf="2">
+            <div class="equipo-slot ganador-slot" data-slot="SF2_QF3"></div>
+            <span>VS</span>
+            <div class="equipo-slot ganador-slot" data-slot="SF2_QF4"></div>
+        </div>
+    </div>
+
+    <!-- FINAL -->
+    <div class="round final hidden">
+        <h3>🏆 FINAL</h3>
+        <div class="final-match">
+            <div class="equipo-slot final-ganador" data-slot="FINAL_SF1"></div>
+            <span>🏆 CAMPEÓN 🏆</span>
+            <div class="equipo-slot final-ganador" data-slot="FINAL_SF2"></div>
+        </div>
+    </div>
+</div>
+</div><!-- BRACKET AUTOMÁTICO -->
+<div class="bracket-container">
+    <!-- CUARTOS -->
+    <div class="round cuartos" id="cuartos">
+        <h3>⚔️ CUARTOS DE FINAL</h3>
+        <div class="match" data-match="QF1">
+            <div class="equipo-slot" data-slot="QF1A1"></div>
+            <span>VS</span>
+            <div class="equipo-slot" data-slot="QF1A2"></div>
+        </div>
+        <div class="match" data-match="QF2">
+            <div class="equipo-slot" data-slot="QF2B1"></div>
+            <span>VS</span>
+            <div class="equipo-slot" data-slot="QF2B2"></div>
+        </div>
+        <div class="match" data-match="QF3">
+            <div class="equipo-slot" data-slot="QF3C1"></div>
+            <span>VS</span>
+            <div class="equipo-slot" data-slot="QF3C2"></div>
+        </div>
+        <div class="match" data-match="QF4">
+            <div class="equipo-slot" data-slot="QF4D1"></div>
+            <span>VS</span>
+            <div class="equipo-slot" data-slot="QF4D2"></div>
+        </div>
+    </div>
+
+    <!-- SEMIS -->
+    <div class="round semis hidden">
+        <h3>🥈 SEMIFINALES</h3>
+        <div class="match" data-match="SF1">
+            <div class="equipo-slot ganador" data-slot="SF1GanadorQF1"></div>
+            <span>VS</span>
+            <div class="equipo-slot ganador" data-slot="SF1GanadorQF2"></div>
+        </div>
+        <div class="match" data-match="SF2">
+            <div class="equipo-slot ganador" data-slot="SF2GanadorQF3"></div>
+            <span>VS</span>
+            <div class="equipo-slot ganador" data-slot="SF2GanadorQF4"></div>
+        </div>
+    </div>
+
+    <!-- FINAL -->
+    <div class="round final hidden">
+        <h3>🏆 FINAL</h3>
+        <div class="match final-match">
+            <div class="equipo-slot final-ganador" data-slot="FINALGanadorSF1"></div>
+            <span>🏆 CAMPEÓN 🏆</span>
+            <div class="equipo-slot final-ganador" data-slot="FINALGanadorSF2"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+    </main>
+
+    <script src="../torneo-don-bosco/js/formato.js"></script>
+</body>
+</html>
