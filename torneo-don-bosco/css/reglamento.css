@@ -1,0 +1,188 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: white;
+}
+
+/* HEADER */
+.header-simple {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.nav-home {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.logo-simple {
+    height: 55px;
+}
+
+/* SECCIÓN */
+.reglamento-section {
+    padding: 140px 20px 60px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* TITULO */
+.main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #f59e0b;
+}
+
+/* CARD */
+.reglamento-card {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* TITULOS INTERNOS */
+.reglamento-card h2 {
+    margin-top: 1.5rem;
+    color: #f59e0b;
+}
+
+/* LISTAS */
+.reglamento-card ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.reglamento-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+.footer {
+    background: #0f172a;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* APP REGLAMENTO */
+.reglamento-app {
+    max-width: 800px;
+    margin: auto;
+    padding: 120px 20px 50px;
+}
+
+/* ITEM */
+.regla {
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.1);
+}
+
+/* HEADER */
+.regla-header {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.regla-header:hover {
+    background: #1d4ed8;
+}
+
+/* BODY */
+.regla-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 1rem;
+}
+
+.regla-body ul {
+    padding: 1rem 0;
+}
+
+.regla-body li {
+    margin-bottom: 0.5rem;
+}
+
+/* ACTIVO */
+.regla.active .regla-body {
+    max-height: 200px;
+}
+
+.regla.active .regla-header span {
+    transform: rotate(45deg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .regla-header {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .nav-home {
+        font-size: 1.3rem;
+    }
+
+    .logo-simple {
+        height: 45px;
+    }
+}

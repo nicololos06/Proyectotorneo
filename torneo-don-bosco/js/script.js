@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // INICIAR CARRUSEL AUTOMÁTICO (15 segundos = 15000ms)
     function startAutoSlide() {
-        autoSlideInterval = setInterval(nextSlide, 15000);
+        autoSlideInterval = setInterval(nextSlide, 7000);
     }
 
     // PAUSAR CARRUSEL
