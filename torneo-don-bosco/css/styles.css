@@ -554,6 +554,107 @@ body {
     border-radius: 2px;
 }
 
+/* RADIO BUTTONS */
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f1f5f9;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.radio-label:hover {
+    background: #e2e8f0;
+}
+
+.radio-label input {
+    accent-color: #1e3a8a;
+}
+
+/* BOTÓN WHATSAPP */
+.btn-submit {
+    background: #25D366;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: #1ebe5d;
+    transform: scale(1.05);
+}
+
+/* BOTÓN RESET */
+.btn-reset {
+    background: #e5e7eb;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer {
+    width: 100%;
+    background: #0f172a;
+    color: white;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* TEXTO */
+.footer-text {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+/* REDES */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* HOVER PRO */
+.social-link:hover {
+    color: #f59e0b;
+    transform: scale(1.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .social-link {
+        font-size: 1.3rem;
+    }
+}
+
 /* GALERÍA RESPONSIVE */
 @media (max-width: 768px) {
     .gallery-grid {

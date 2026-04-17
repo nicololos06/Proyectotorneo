@@ -1,0 +1,239 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: white;
+}
+
+/* HEADER */
+.header-simple {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white; /* ← sólido */
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.nav-home {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.logo-simple {
+    height: 60px;
+}
+
+/* SECCIÓN */
+.calendario-section {
+    padding: 120px 20px 50px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* TITULO */
+.main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1e3a8a;
+}
+
+/* CARD FECHA */
+.fecha-card {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.fecha-card h2 {
+    margin-bottom: 1.5rem;
+    color: #1e3a8a;
+}
+
+/* PARTIDOS */
+.partido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.15);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.partido strong {
+    font-size: 1.2rem;
+}
+
+/* HORA */
+.hora {
+    position: absolute;
+    right: 15px;
+    bottom: -18px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* HOVER */
+.partido:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+/* BOTONES FECHAS */
+.fechas-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.fechas-nav button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    background: #f59e0b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fechas-nav button:hover {
+    background: #d97706;
+    transform: scale(1.05);
+}
+
+/* OCULTAR FECHAS */
+.fecha {
+    display: none;
+}
+
+.calendario-section {
+    padding-top: 120px;
+}
+
+/* ANIMACIÓN FECHAS */
+.fecha {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.fecha.activa {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* BOTÓN ACTIVO */
+.fechas-nav button.activo {
+    background: #1e3a8a;
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* HOVER MÁS SUAVE */
+.fechas-nav button {
+    transition: all 0.3s ease;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer {
+    width: 100%;
+    background: #0f172a;
+    color: white;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* TEXTO */
+.footer-text {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+/* REDES */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* HOVER PRO */
+.social-link:hover {
+    color: #f59e0b;
+    transform: scale(1.2);
+}
+
+.footer {
+    width: 100%;
+    background: #0f172a;
+    color: white;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .social-link {
+        font-size: 1.3rem;
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .partido {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hora {
+        position: static;
+    }
+}

@@ -105,9 +105,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Formulario Contacto
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
-    alert('¡Mensaje enviado correctamente! Gracias por contactarnos.');
-    this.reset();
+
+    const nombre = document.getElementById("nombre").value;
+    const email = document.getElementById("email").value;
+    const telefono = document.getElementById("telefono").value;
+    const categoria = document.getElementById("categoria").value;
+    const comentario = document.getElementById("comentario").value;
+
+    const modalidad = document.querySelector('input[name="modalidad"]:checked')?.value;
+
+    const mensaje = `Hola, quiero información del torneo:
+    
+👤 Nombre: ${nombre}
+📧 Email: ${email}
+📱 Teléfono: ${telefono}
+🏆 Categoría: ${categoria}
+⚽ Modalidad: ${modalidad}
+
+📝 Mensaje:
+${comentario}`;
+
+    const numero = "5491134214866"; // TU NUMERO
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, "_blank");
 });
+

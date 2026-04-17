@@ -14,6 +14,9 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- HEADER -->
@@ -103,7 +106,7 @@
         </div>
         <div class="card-content">
             <p><strong>Inicio:</strong> Primera Fecha: 19 de Abril Segunda Fecha: 26 de Abril <br></p>
-            <a href="fechas.html" class="card-btn" target="_blank">
+            <a href="../torneo-don-bosco/calendario/fechas.html" class="card-btn" target="_blank">
                 <i class="fas fa-calendar-alt"></i> Calendario Completo
             </a>
         </div>
@@ -186,17 +189,23 @@
                     </div>
                     <div class="form-group">
                         <label>Modalidad</label>
-                        <div class="form-options">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="modalidad[]" value="jugador"> Jugador
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="modalidad[]" value="entrenador"> Entrenador
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="modalidad[]" value="espectador"> Espectador
-                            </label>
-                        </div>
+                            <div class="form-options">
+
+                        <label class="radio-label">
+                            <input type="radio" name="modalidad" value="Jugador" required>
+                            Jugador
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="modalidad" value="Entrenador">
+                            Entrenador
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="modalidad" value="Espectador">
+                            Espectador
+                        </label>
+                    </div>
                     </div>
                     <div class="form-group">
                         <label for="comentario">Comentario </label>
@@ -204,10 +213,11 @@
                     </div>
                     <div class="form-actions">
                         <button type="submit" class="btn-submit">
-                            <i class="fas fa-paper-plane"></i> Enviar
+                            <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
                         </button>
+
                         <button type="reset" class="btn-reset">
-                            <i class="fas fa-redo"></i> Limpiar
+                            Limpiar
                         </button>
                     </div>
                 </form>
@@ -217,14 +227,29 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Torneo Oratorio Don Bosco. Todos los derechos reservados.</p>
-           
-        </div>
-    </footer>
+    <div class="footer-container">
 
-   
+        <p class="footer-text">
+            © 2026 Torneo Oratorio Don Bosco
+        </p>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/torneosdonbosco_oratorio/" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://github.com/nicololos06?tab=repositories" class="social-link">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+
     <!-- JS -->
     <script src="js/script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
