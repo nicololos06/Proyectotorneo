@@ -562,6 +562,7 @@ body {
     background: #f1f5f9;
     padding: 0.6rem 1rem;
     border-radius: 10px;
+    border : 2px solid rgba(25, 121, 33, 0.467);
     cursor: pointer;
     transition: 0.3s;
 }
