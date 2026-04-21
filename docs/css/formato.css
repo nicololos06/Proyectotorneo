@@ -387,6 +387,38 @@ body {
         min-width: 600px;
     }
 
+    @media (max-width: 768px) {
+
+    .tabla-grupo {
+        overflow-x: hidden; 
+    }
+
+    .tabla-grupo table {
+        width: 100%;
+        min-width: unset; 
+        font-size: 0.75rem; 
+    }
+
+    .tabla-grupo th,
+    .tabla-grupo td {
+        padding: 0.4rem;
+        text-align: center;
+    }
+
+    .tabla-grupo td:nth-child(3),
+    .tabla-grupo td:nth-child(4),
+    .tabla-grupo td:nth-child(5),
+    .tabla-grupo td:nth-child(6),
+    .tabla-grupo td:nth-child(7),
+    .tabla-grupo td:nth-child(8) {
+        font-size: 0.7rem;
+    }
+
+    .tabla-grupo td:nth-child(2) {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+}
     /* ========================= */
     /* PARTIDOS (MATA-MATA) */
     /* ========================= */
