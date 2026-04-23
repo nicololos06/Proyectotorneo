@@ -118,19 +118,17 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
     const mensaje = `Hola, quiero información del torneo:
     
-👤 Nombre: ${nombre}
-📧 Email: ${email}
-📱 Teléfono: ${telefono}
-🏆 Categoría: ${categoria}
-⚽ Modalidad: ${modalidad}
+Nombre: ${nombre}
+Email: ${email}
+Teléfono: ${telefono}
+Categoría: ${categoria}
+Modalidad: ${modalidad}
 
-📝 Mensaje:
-${comentario}`;
+Mensaje: ${comentario}`;
 
-    const numero = "5491134214866"; // TU NUMERO
+    const numero = "5491134214866";
 
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
     window.open(url, "_blank");
 });
-
