@@ -63,28 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-;// Cards Desplegables 
-document.querySelectorAll('.expandable-card').forEach(card => {
-    card.addEventListener('click', function(e) {
-        // Evitar que el click en el botón active el desplegable
-        if (e.target.closest('.card-btn')) return;
-        
-        const content = this.querySelector('.card-content');
-        if (content.style.maxHeight) {
-            // Cerrar
-            content.style.maxHeight = null;
-            this.style.cursor = 'pointer';
-            this.classList.remove('expanded');
-        } else {
-            // Abrir
-            content.style.maxHeight = content.scrollHeight + 'px';
-            content.style.overflow = 'visible';
-            this.style.cursor = 'default';
-            this.classList.add('expanded');
-        }
-    });
-});
-
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
