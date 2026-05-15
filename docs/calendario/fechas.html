@@ -3,242 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario - Torneo Don Bosco</title>
+    <title>Calendario — Torneo Don Bosco 2026</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/fechas.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1qObfxVmFgwAYF+4gzRbgiNL515nqdIxJ.351uOhcUnpnsS9Cwm6V9UXp5kXRWq+4v6MmvMaFSPg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/a2d9d5a64f.js" crossorigin="anonymous"></script>
 <body>
 
-<header class="header-simple">
-    <div class="nav-container">
-        <a href="../index.html" class="nav-home">
-            <img src="../img/iconos/logo - copia.png" class="logo-simple">
-            <span>Torneo Don Bosco </span>
+<header class="header">
+    <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+            <img src="../img/iconos/logo - copia.png" alt="Logo">
+            <span>Torneo Don Bosco</span>
+        </a>
+        <a href="../index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Volver
         </a>
     </div>
 </header>
 
-<main class="calendario-section">
-
-    <h1 class="main-title">📅 CALENDARIO DEL TORNEO</h1>
-
-        <div class="fechas-nav">
-            <button onclick="mostrarFecha('f1')">Fecha 1</button>
-            <button onclick="mostrarFecha('f2')">Fecha 2</button>
-            <button onclick="mostrarFecha('f3')">Fecha 3</button>
-            <button onclick="mostrarFecha('cuartos')">Cuartos</button>
-            <button onclick="mostrarFecha('semis')">Semis</button>
-            <button onclick="mostrarFecha('final')">Final</button>
+<div class="page-hero">
+    <img src="img/campeones.png" alt="Calendario">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+        <div class="page-tag">Fixtures 2026</div>
+        <h1 class="page-title">CALENDARIO</h1>
+    </div>
 </div>
+
+<main class="main">
+
+    <div class="stages" id="stages">
+        <button class="stage-pill active" data-panel="f1">Fecha 1</button>
+        <button class="stage-pill" data-panel="f2">Fecha 2</button>
+        <button class="stage-pill" data-panel="f3">Fecha 3</button>
+        <button class="stage-pill" data-panel="cuartos">Cuartos</button>
+        <button class="stage-pill" data-panel="semis">Semis</button>
+        <button class="stage-pill" data-panel="final">Final</button>
+    </div>
 
     <!-- FECHA 1 -->
-    <div id="f1" class="fecha">
-        <div class="fecha-card">
-        <h2>Fecha 1 - 19/04</h2>
-
-        <div class="partido">
-            <span>Don Bosco FC</span>
-            <strong>VS</strong>
-            <span>La Gloria</span>
-            <div class="hora">10:00 hs</div>
+    <div class="panel active" id="panel-f1">
+        <div class="fecha-header">
+            <div class="fecha-badge">FECHA 1</div>
+            <div class="fecha-title">JORNADA INAUGURAL</div>
+            <div class="fecha-date"><i class="fas fa-calendar-alt"></i> 19 de Abril</div>
         </div>
-        
-        <div class="partido">
-            <span>Juniors Unidos</span>
-            <strong>VS</strong>
-            <span>Atlético Norte</span>
-            <div class="hora">11:00 hs</div>
-        </div>   
-        <div class="partido">
-            <span>Real Madrid Juniors</span>
-            <strong>VS</strong>
-            <span>Boca del Riachuelo</span>
-            <div class="hora">12:00 hs</div>
-        </div>
-
-        <div class="partido">
-            <span>River Plate Kids</span>
-            <strong>VS</strong>
-            <span>San Lorenzo FC</span>
-            <div class="hora">13:00 hs</div>
+        <div class="partidos-list">
+            <div class="partido-card">
+                <div class="equipo-name">Don Bosco FC</div>
+                <div class="vs-badge">VS</div>
+                <div class="equipo-name right">La Gloria</div>
+                <div class="hora-badge"><div class="hora-time">10:00</div><div class="hora-label">hs</div></div>
+            </div>
+            <div class="partido-card">
+                <div class="equipo-name">Juniors Unidos</div>
+                <div class="vs-badge">VS</div>
+                <div class="equipo-name right">Atlético Norte</div>
+                <div class="hora-badge"><div class="hora-time">11:00</div><div class="hora-label">hs</div></div>
+            </div>
+            <div class="partido-card">
+                <div class="equipo-name">Real Madrid Juniors</div>
+                <div class="vs-badge">VS</div>
+                <div class="equipo-name right">Boca del Riachuelo</div>
+                <div class="hora-badge"><div class="hora-time">12:00</div><div class="hora-label">hs</div></div>
+            </div>
+            <div class="partido-card">
+                <div class="equipo-name">River Plate Kids</div>
+                <div class="vs-badge">VS</div>
+                <div class="equipo-name right">San Lorenzo FC</div>
+                <div class="hora-badge"><div class="hora-time">13:00</div><div class="hora-label">hs</div></div>
+            </div>
         </div>
     </div>
-</div>
+
     <!-- FECHA 2 -->
-    <div id="f2" class="fecha">
-        <div class="fecha-card">
-        <h2>Fecha 2 - 26/04</h2>
-
-        <div class="partido">
-            <span>Don Bosco FC</span>
-            <strong>VS</strong>
-            <span>Juniors Unidos</span>
-            <div class="hora">10:00 hs</div>
+    <div class="panel" id="panel-f2">
+        <div class="fecha-header">
+            <div class="fecha-badge">FECHA 2</div>
+            <div class="fecha-title">SEGUNDA JORNADA</div>
+            <div class="fecha-date"><i class="fas fa-calendar-alt"></i> 26 de Abril</div>
         </div>
-
-        <div class="partido">
-            <span>La Gloria</span>
-            <strong>VS</strong>
-            <span>Atlético Norte</span>
-            <div class="hora">11:00 hs</div>
-        </div>
-
-        <div class="partido">
-            <span>Real Madrid Juniors</span>
-            <strong>VS</strong>
-            <span>River Plate Kids</span>
-            <div class="hora">12:00 hs</div>
-        </div>
-
-        <div class="partido">
-            <span>Boca del Riachuelo</span>
-            <strong>VS</strong>
-            <span>San Lorenzo FC</span>
-            <div class="hora">13:00 hs</div>
+        <div class="partidos-list">
+            <div class="partido-card">
+                <div class="equipo-name">Don Bosco FC</div>
+                <div class="vs-badge">VS</div>
+                <div class="equipo-name right">Juniors Unidos</div>
+                <div class="hora-badge"><div class="hora-time">10:00</div><div class="hora-label">hs</div></div>
+            </div>
+            <div class="partido-card">
+                <div class="equipo-name">La Gloria</div>
+                <div class="vs-badge">VS</div>
+                <div class="equipo-name right">Atlético Norte</div>
+                <div class="hora-badge"><div class="hora-time">11:00</div><div class="hora-label">hs</div></div>
+            </div>
+            <div class="partido-card">
+                <div class="equipo-name">Real Madrid Juniors</div>
+                <div class="vs-badge">VS</div>
+                <div class="equipo-name right">River Plate Kids</div>
+                <div class="hora-badge"><div class="hora-time">12:00</div><div class="hora-label">hs</div></div>
+            </div>
+            <div class="partido-card">
+                <div class="equipo-name">Boca del Riachuelo</div>
+                <div class="vs-badge">VS</div>
+                <div class="equipo-name right">San Lorenzo FC</div>
+                <div class="hora-badge"><div class="hora-time">13:00</div><div class="hora-label">hs</div></div>
+            </div>
         </div>
     </div>
-</div>
-<!-- FECHA 3 -->
-<div id="f3" class="fecha">
-    <div class="fecha-card">
-        <h2>Fecha 3 - 03/05</h2>
 
-        <div class="partido">
-            <span>Don Bosco FC</span>
-            <strong>VS</strong>
-            <span>Atlético Norte</span>
-            <div class="hora">10:00 hs</div>
+    <!-- FECHA 3 -->
+    <div class="panel" id="panel-f3">
+        <div class="fecha-header">
+            <div class="fecha-badge">FECHA 3</div>
+            <div class="fecha-title">JORNADA DE CIERRE</div>
+            <div class="fecha-date"><i class="fas fa-calendar-alt"></i> 3 de Mayo</div>
         </div>
-
-        <div class="partido">
-            <span>La Gloria</span>
-            <strong>VS</strong>
-            <span>Juniors Unidos</span>
-            <div class="hora">11:00 hs</div>
+        <div class="partidos-list">
+            <div class="partido-card">
+                <div class="equipo-name">Don Bosco FC</div>
+                <div class="vs-badge">VS</div>
+                <div class="equipo-name right">Atlético Norte</div>
+                <div class="hora-badge"><div class="hora-time">10:00</div><div class="hora-label">hs</div></div>
+            </div>
+            <div class="partido-card">
+                <div class="equipo-name">La Gloria</div>
+                <div class="vs-badge">VS</div>
+                <div class="equipo-name right">Juniors Unidos</div>
+                <div class="hora-badge"><div class="hora-time">11:00</div><div class="hora-label">hs</div></div>
+            </div>
+            <div class="partido-card">
+                <div class="equipo-name">Real Madrid Juniors</div>
+                <div class="vs-badge">VS</div>
+                <div class="equipo-name right">San Lorenzo FC</div>
+                <div class="hora-badge"><div class="hora-time">12:00</div><div class="hora-label">hs</div></div>
+            </div>
+            <div class="partido-card">
+                <div class="equipo-name">Boca del Riachuelo</div>
+                <div class="vs-badge">VS</div>
+                <div class="equipo-name right">River Plate Kids</div>
+                <div class="hora-badge"><div class="hora-time">13:00</div><div class="hora-label">hs</div></div>
+            </div>
         </div>
-
-        <div class="partido">
-            <span>Real Madrid Juniors</span>
-            <strong>VS</strong>
-            <span>San Lorenzo FC</span>
-            <div class="hora">12:00 hs</div>
-        </div>
-
-        <div class="partido">
-            <span>Boca del Riachuelo</span>
-            <strong>VS</strong>
-            <span>River Plate Kids</span>
-            <div class="hora">13:00 hs</div>
-        </div>
-</div>
-</div>
-<!-- FECHA IDA CUARTOS -->
-<div id="cuartos" class="fecha">
-    <div class="fecha-card">
-        <h2>Cuartos (Ida) - 10/05</h2>
-
-        <div class="partido">
-            <span>1° Grupo A</span>
-            <strong>VS</strong>
-            <span>2° Grupo B</span>
-        </div>
-
-        <div class="partido">
-            <span>2° Grupo A</span>
-            <strong>VS</strong>
-            <span>1° Grupo B</span>
-        </div>
-</div>
-
-<!-- FECHA VUELTA CUARTOS -->
-<div id="cuartos" class="fecha"></div>
-    <div class="fecha-card">
-        <h2>Cuartos (Vuelta) - 17/05</h2>
-
-        <div class="partido">
-            <span>2° Grupo B</span>
-            <strong>VS</strong>
-            <span>1° Grupo A</span>
-        </div>
-
-        <div class="partido">
-            <span>1° Grupo B</span>
-            <strong>VS</strong>
-            <span>2° Grupo A</span>
-        </div>
-</div>
-</div>
-<!-- FECHA IDA SEMIFINALES -->
-<div id="semis" class="fecha">
-    <div class="fecha-card">
-        <h2>Semifinales (Ida) - 24/05</h2>
-
-        <div class="partido">
-            <span>Ganador QF1</span>
-            <strong>VS</strong>
-            <span>Ganador QF2</span>
-        </div>
-
-        <div class="partido">
-            <span>Ganador QF3</span>
-            <strong>VS</strong>
-            <span>Ganador QF4</span>
-        </div>
-</div>
-<!-- FECHA VUELTA SEMIFINALES -->
-<div id="semis" class="fecha"></div>
-    <div class="fecha-card">
-        <h2>Semifinales (Vuelta) - 31/05</h2>
-
-        <div class="partido">
-            <span>Ganador QF2</span>
-            <strong>VS</strong>
-            <span>Ganador QF1</span>
-        </div>
-
-        <div class="partido">
-            <span>Ganador QF4</span>
-            <strong>VS</strong>
-            <span>Ganador QF3</span>
-        </div>
-</div>
-</div>
-<!-- FECHA FINAL -->
-<div id="final" class="fecha">
-<div class="fecha-card">
-    <h2>FINAL - 07/06</h2>
-
-    <div class="partido final">
-        <span>Ganador Semi 1</span>
-        <strong>VS</strong>
-        <span>Ganador Semi 2</span>
-        <div class="hora">16:00 hs</div>
     </div>
-</div>
-</div>
+
+    <!-- CUARTOS -->
+    <div class="panel" id="panel-cuartos">
+        <div class="fecha-header">
+            <div class="fecha-badge">CUARTOS</div>
+            <div class="fecha-title">ELIMINATORIAS</div>
+            <div class="fecha-date"><i class="fas fa-calendar-alt"></i> 10 y 17 de Mayo</div>
+        </div>
+        <div class="bracket-section">
+            <div class="bracket-round">
+                <div class="bracket-round-title">⚔️ IDA — 10 DE MAYO</div>
+                <div class="bracket-match">
+                    <div class="bracket-team">1° Grupo A</div>
+                    <div class="bracket-vs">VS</div>
+                    <div class="bracket-team right">2° Grupo B</div>
+                    <div class="bracket-info">QF 1</div>
+                </div>
+                <div class="bracket-match">
+                    <div class="bracket-team">2° Grupo A</div>
+                    <div class="bracket-vs">VS</div>
+                    <div class="bracket-team right">1° Grupo B</div>
+                    <div class="bracket-info">QF 2</div>
+                </div>
+            </div>
+            <div class="bracket-round">
+                <div class="bracket-round-title">⚔️ VUELTA — 17 DE MAYO</div>
+                <div class="bracket-match">
+                    <div class="bracket-team">2° Grupo B</div>
+                    <div class="bracket-vs">VS</div>
+                    <div class="bracket-team right">1° Grupo A</div>
+                    <div class="bracket-info">QF 1</div>
+                </div>
+                <div class="bracket-match">
+                    <div class="bracket-team">1° Grupo B</div>
+                    <div class="bracket-vs">VS</div>
+                    <div class="bracket-team right">2° Grupo A</div>
+                    <div class="bracket-info">QF 2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEMIS -->
+    <div class="panel" id="panel-semis">
+        <div class="fecha-header">
+            <div class="fecha-badge">SEMIS</div>
+            <div class="fecha-title">SEMIFINALES</div>
+            <div class="fecha-date"><i class="fas fa-calendar-alt"></i> 24 y 31 de Mayo</div>
+        </div>
+        <div class="bracket-section">
+            <div class="bracket-round">
+                <div class="bracket-round-title">🥈 IDA — 24 DE MAYO</div>
+                <div class="bracket-match">
+                    <div class="bracket-team">Ganador QF1</div>
+                    <div class="bracket-vs">VS</div>
+                    <div class="bracket-team right">Ganador QF2</div>
+                    <div class="bracket-info">SF 1</div>
+                </div>
+                <div class="bracket-match">
+                    <div class="bracket-team">Ganador QF3</div>
+                    <div class="bracket-vs">VS</div>
+                    <div class="bracket-team right">Ganador QF4</div>
+                    <div class="bracket-info">SF 2</div>
+                </div>
+            </div>
+            <div class="bracket-round">
+                <div class="bracket-round-title">🥈 VUELTA — 31 DE MAYO</div>
+                <div class="bracket-match">
+                    <div class="bracket-team">Ganador QF2</div>
+                    <div class="bracket-vs">VS</div>
+                    <div class="bracket-team right">Ganador QF1</div>
+                    <div class="bracket-info">SF 1</div>
+                </div>
+                <div class="bracket-match">
+                    <div class="bracket-team">Ganador QF4</div>
+                    <div class="bracket-vs">VS</div>
+                    <div class="bracket-team right">Ganador QF3</div>
+                    <div class="bracket-info">SF 2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FINAL -->
+    <div class="panel" id="panel-final">
+        <div class="fecha-header">
+            <div class="fecha-badge">FINAL</div>
+            <div class="fecha-title">GRAN FINAL</div>
+            <div class="fecha-date"><i class="fas fa-calendar-alt"></i> 7 de Junio</div>
+        </div>
+        <div class="final-card">
+            <span class="fi">🏆</span>
+            <h3>GRAN FINAL 2026</h3>
+            <p>El partido más esperado del año</p>
+            <div class="final-match-label">
+                <div class="final-team">Ganador Semi 1</div>
+                <div class="final-vs">VS</div>
+                <div class="final-team">Ganador Semi 2</div>
+            </div>
+            <div class="final-hora"><i class="fas fa-clock"></i> 16:00 hs</div>
+        </div>
+    </div>
+
 </main>
-        <!-- FOOTER -->
-    <footer class="footer">
-    <div class="footer-container">
 
-        <p class="footer-text">
-            © 2026 Torneo Oratorio Don Bosco
-        </p>
-
-        <div class="social-links">
-            <a href="https://www.instagram.com/torneosdonbosco_oratorio/" class="social-link">
-                <i class="fab fa-instagram"></i>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <a href="../index.html" class="footer-logo">
+                <img src="../img/iconos/logo - copia.png" alt="Logo">
+                <span>Torneo Don Bosco</span>
             </a>
-
-            <a href="https://github.com/nicololos06?tab=repositories" class="social-link">
-                <i class="fab fa-github"></i>
-            </a>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/torneosdonbosco_oratorio/" class="footer-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/nicololos06?tab=repositories" class="footer-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://wa.me/5491134214866" class="footer-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <p class="footer-copy">© 2026 Torneo Oratorio Don Bosco · Todos los derechos reservados</p>
         </div>
+    </footer>
 
-    </div>
-</footer>
-        <script src="../js/fechas.js"></script>
+<script src="../js/fechas.js"></script>
+
 </body>
 </html>
